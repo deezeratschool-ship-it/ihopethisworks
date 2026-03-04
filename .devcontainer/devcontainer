@@ -1,0 +1,24 @@
+{
+  "name": "desktop-lite-container",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "version": "latest"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "remote.autoForwardPorts": true
+      },
+      "extensions": [
+        "ms-vscode.remote-explorer"
+      ]
+    }
+  },
+
+  "forwardPorts": [6080],
+  "postCreateCommand": "echo 'Desktop Lite installed'"
+}
