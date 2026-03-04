@@ -20,5 +20,6 @@
   },
 
   "forwardPorts": [6080],
-  "postCreateCommand": "echo 'Desktop Lite installed'"
+
+  "postCreateCommand": "curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo gpg --dearmor -o /usr/share/keyrings/yarn.gpg && echo \"deb [signed-by=/usr/share/keyrings/yarn.gpg] https://dl.yarnpkg.com/debian stable main\" | sudo tee /etc/apt/sources.list.d/yarn.list && sudo apt update"
 }
